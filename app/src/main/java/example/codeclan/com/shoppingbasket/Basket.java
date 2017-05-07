@@ -14,4 +14,8 @@ public class Basket {
         this.contentsOfBasket = new ArrayList<Item>();
     }
 
+    public int getNumberOfItemsInBasket() {
+        return contentsOfBasket.size();
+    }
+
 }

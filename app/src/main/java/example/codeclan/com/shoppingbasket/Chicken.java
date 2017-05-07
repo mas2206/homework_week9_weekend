@@ -11,7 +11,7 @@ public class Chicken implements Item {
     }
 
     public String itemDescription() {
-        return "A whole chicken, large";
+        return "A large whole chicken";
     }
 
 }
