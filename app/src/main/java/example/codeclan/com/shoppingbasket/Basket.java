@@ -48,4 +48,11 @@ public class Basket {
         addItemToBasket(freeItem);
     }
 
+//    public int applyTenPercentOffDiscount() {
+//        if (getTotalCostOfBasket() > 2000) {
+//            return Math.round((getTotalCostOfBasket() - getTotalCostOfBasket() * 0.1));
+//        }
+//        return getTotalCostOfBasket();
+//    }
+
 }

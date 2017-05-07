@@ -157,4 +157,15 @@ public class BasketTest {
         assertEquals(345, basket.getTotalCostOfBasket());
     }
 
+//    @Test
+//    public void tenPercentOffDiscountWorksOverTwentyPounds() {
+//        basket.addItemToBasket(chicken);
+//        basket.addItemToBasket(chicken);
+//        basket.addItemToBasket(chicken);
+//        basket.addItemToBasket(chicken);
+//        basket.addItemToBasket(chicken);
+//        basket.applyTenPercentOffDiscount();
+//        assertEquals(2048, basket.getTotalCostOfBasket());
+//    }
+
 }
