@@ -71,4 +71,13 @@ public class BasketTest {
         assertEquals(3, basket.getNumberOfItemsInBasket());
     }
 
+    @Test
+    public void canEmptyBasketContainingThreeItems() {
+        basket.addItemToBasket(bread);
+        basket.addItemToBasket(eggs);
+        basket.addItemToBasket(milk);
+        basket.emptyBasket();
+        assertEquals(0, basket.getNumberOfItemsInBasket());
+    }
+
 }

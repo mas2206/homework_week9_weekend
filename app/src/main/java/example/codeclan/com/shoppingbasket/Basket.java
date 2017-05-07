@@ -22,4 +22,8 @@ public class Basket {
         contentsOfBasket.add(item);
     }
 
+    public void emptyBasket() {
+        contentsOfBasket.clear();
+    }
+
 }
