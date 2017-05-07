@@ -39,4 +39,28 @@ public class BasketTest {
         assertEquals(1, basket.getNumberOfItemsInBasket());
     }
 
+    @Test
+    public void canAddChickenToBasket() {
+        basket.addItemToBasket(chicken);
+        assertEquals(1, basket.getNumberOfItemsInBasket());
+    }
+
+    @Test
+    public void canAddEggsToBasket() {
+        basket.addItemToBasket(eggs);
+        assertEquals(1, basket.getNumberOfItemsInBasket());
+    }
+
+    @Test
+    public void canAddMilkToBasket() {
+        basket.addItemToBasket(milk);
+        assertEquals(1, basket.getNumberOfItemsInBasket());
+    }
+
+    @Test
+    public void canAddPastaToBasket() {
+        basket.addItemToBasket(pasta);
+        assertEquals(1, basket.getNumberOfItemsInBasket());
+    }
+
 }
