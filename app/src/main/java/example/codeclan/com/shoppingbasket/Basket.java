@@ -18,4 +18,8 @@ public class Basket {
         return contentsOfBasket.size();
     }
 
+    public void addItemToBasket(Item item) {
+        contentsOfBasket.add(item);
+    }
+
 }

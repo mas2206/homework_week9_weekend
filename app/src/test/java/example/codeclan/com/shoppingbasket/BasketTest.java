@@ -33,4 +33,10 @@ public class BasketTest {
         assertEquals(0, basket.getNumberOfItemsInBasket());
     }
 
+    @Test
+    public void canAddBreadToBasket() {
+        basket.addItemToBasket(bread);
+        assertEquals(1, basket.getNumberOfItemsInBasket());
+    }
+
 }
