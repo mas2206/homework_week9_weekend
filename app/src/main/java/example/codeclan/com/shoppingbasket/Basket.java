@@ -26,4 +26,11 @@ public class Basket {
         contentsOfBasket.clear();
     }
 
+    public Item removeItemFromBasket() {
+        if (getNumberOfItemsInBasket() > 0) {
+            return contentsOfBasket.remove(0);
+        }
+        return null;
+    }
+
 }

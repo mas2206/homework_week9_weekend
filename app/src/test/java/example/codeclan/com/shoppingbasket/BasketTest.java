@@ -72,12 +72,20 @@ public class BasketTest {
     }
 
     @Test
-    public void canEmptyBasketContainingThreeItems() {
+    public void canEmptyBasketContainingMultipleItems() {
         basket.addItemToBasket(bread);
         basket.addItemToBasket(eggs);
         basket.addItemToBasket(milk);
         basket.emptyBasket();
         assertEquals(0, basket.getNumberOfItemsInBasket());
+    }
+
+    @Test
+    public void canRemoveBreadFromBasket() {
+        basket.addItemToBasket(bread);
+        Item item = basket.removeItemFromBasket();
+        Bread itemToBeRemoved = (Bread)item;
+        assertEquals("Thick sliced loaf, ideal for toasties", itemToBeRemoved.itemDescription());
     }
 
 }
