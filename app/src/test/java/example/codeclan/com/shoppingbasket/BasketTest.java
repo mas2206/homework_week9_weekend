@@ -88,4 +88,36 @@ public class BasketTest {
         assertEquals("Thick sliced loaf, ideal for toasties", itemToBeRemoved.itemDescription());
     }
 
+    @Test
+    public void canRemoveChickenFromBasket() {
+        basket.addItemToBasket(chicken);
+        Item item = basket.removeItemFromBasket();
+        Chicken itemToBeRemoved = (Chicken)item;
+        assertEquals("A large whole chicken", itemToBeRemoved.itemDescription());
+    }
+
+    @Test
+    public void canRemoveEggsFromBasket() {
+        basket.addItemToBasket(eggs);
+        Item item = basket.removeItemFromBasket();
+        Eggs itemToBeRemoved = (Eggs)item;
+        assertEquals("Six large free range eggs", itemToBeRemoved.itemDescription());
+    }
+
+    @Test
+    public void canRemoveMilkFromBasket() {
+        basket.addItemToBasket(milk);
+        Item item = basket.removeItemFromBasket();
+        Milk itemToBeRemoved = (Milk)item;
+        assertEquals("Semi-skimmed milk", itemToBeRemoved.itemDescription());
+    }
+
+    @Test
+    public void canRemovePastaFromBasket() {
+        basket.addItemToBasket(pasta);
+        Item item = basket.removeItemFromBasket();
+        Pasta itemToBeRemoved = (Pasta)item;
+        assertEquals("Very basic penne pasta", itemToBeRemoved.itemDescription());
+    }
+
 }

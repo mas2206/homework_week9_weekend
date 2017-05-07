@@ -11,7 +11,7 @@ public class Eggs implements Item {
     }
 
     public String itemDescription() {
-        return "6 free range large eggs";
+        return "Six large free range eggs";
     }
 
 }
