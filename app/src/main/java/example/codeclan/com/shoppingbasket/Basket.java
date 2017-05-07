@@ -33,4 +33,12 @@ public class Basket {
         return null;
     }
 
+    public int getValueOfItemsInBasket() {
+        int total = 0;
+        for (Item item : contentsOfBasket) {
+            total += item.itemValue();
+        }
+        return total;
+    }
+
 }

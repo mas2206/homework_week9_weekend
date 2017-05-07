@@ -120,4 +120,11 @@ public class BasketTest {
         assertEquals("Very basic penne pasta", itemToBeRemoved.itemDescription());
     }
 
+    @Test
+    public void canCalculateValueOfBasket() {
+        basket.addItemToBasket(pasta);
+        basket.addItemToBasket(chicken);
+        assertEquals(495, basket.getValueOfItemsInBasket());
+    }
+
 }
