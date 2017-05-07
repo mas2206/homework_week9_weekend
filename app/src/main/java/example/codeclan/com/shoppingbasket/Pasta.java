@@ -6,12 +6,8 @@ package example.codeclan.com.shoppingbasket;
 
 public class Pasta implements Item {
 
-    public int itemValue() {
+    public int itemCost() {
         return 40;
-    }
-
-    public String itemDescription() {
-        return "Very basic penne pasta";
     }
 
 }

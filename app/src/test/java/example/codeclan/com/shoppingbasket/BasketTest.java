@@ -83,48 +83,57 @@ public class BasketTest {
     @Test
     public void canRemoveBreadFromBasket() {
         basket.addItemToBasket(bread);
-        Item item = basket.removeItemFromBasket();
-        Bread itemToBeRemoved = (Bread)item;
-        assertEquals("Thick sliced loaf, ideal for toasties", itemToBeRemoved.itemDescription());
+        basket.removeItemFromBasket(bread);
+        assertEquals(0, basket.getNumberOfItemsInBasket());
     }
 
     @Test
     public void canRemoveChickenFromBasket() {
         basket.addItemToBasket(chicken);
-        Item item = basket.removeItemFromBasket();
-        Chicken itemToBeRemoved = (Chicken)item;
-        assertEquals("A large whole chicken", itemToBeRemoved.itemDescription());
+        basket.removeItemFromBasket(chicken);
+        assertEquals(0, basket.getNumberOfItemsInBasket());
     }
 
     @Test
     public void canRemoveEggsFromBasket() {
         basket.addItemToBasket(eggs);
-        Item item = basket.removeItemFromBasket();
-        Eggs itemToBeRemoved = (Eggs)item;
-        assertEquals("Six large free range eggs", itemToBeRemoved.itemDescription());
+        basket.removeItemFromBasket(eggs);
+        assertEquals(0, basket.getNumberOfItemsInBasket());
     }
 
     @Test
     public void canRemoveMilkFromBasket() {
         basket.addItemToBasket(milk);
-        Item item = basket.removeItemFromBasket();
-        Milk itemToBeRemoved = (Milk)item;
-        assertEquals("Semi-skimmed milk", itemToBeRemoved.itemDescription());
+        basket.removeItemFromBasket(milk);
+        assertEquals(0, basket.getNumberOfItemsInBasket());
     }
 
     @Test
     public void canRemovePastaFromBasket() {
         basket.addItemToBasket(pasta);
-        Item item = basket.removeItemFromBasket();
-        Pasta itemToBeRemoved = (Pasta)item;
-        assertEquals("Very basic penne pasta", itemToBeRemoved.itemDescription());
+        basket.removeItemFromBasket(pasta);
+        assertEquals(0, basket.getNumberOfItemsInBasket());
     }
 
     @Test
-    public void canCalculateValueOfBasket() {
+    public void canRemoveMultipleItemsFromBasket() {
+        basket.addItemToBasket(bread);
+        basket.addItemToBasket(bread);
+        basket.addItemToBasket(bread);
+        basket.addItemToBasket(chicken);
+        basket.addItemToBasket(milk);
+        basket.addItemToBasket(bread);
+        basket.removeItemFromBasket(bread);
+        basket.removeItemFromBasket(bread);
+        basket.removeItemFromBasket(chicken);
+        assertEquals(3, basket.getNumberOfItemsInBasket());
+    }
+
+    @Test
+    public void canCalculateTotalCostOfBasket() {
         basket.addItemToBasket(pasta);
         basket.addItemToBasket(chicken);
-        assertEquals(495, basket.getValueOfItemsInBasket());
+        assertEquals(495, basket.getTotalCostOfBasket());
     }
 
 }

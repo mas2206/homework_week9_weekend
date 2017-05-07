@@ -6,8 +6,6 @@ package example.codeclan.com.shoppingbasket;
 
 public interface Item {
 
-    int itemValue();
-
-    String itemDescription();
+    int itemCost();
 
 }

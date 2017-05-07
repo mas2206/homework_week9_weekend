@@ -6,12 +6,8 @@ package example.codeclan.com.shoppingbasket;
 
 public class Eggs implements Item {
 
-    public int itemValue() {
+    public int itemCost() {
         return 130;
-    }
-
-    public String itemDescription() {
-        return "Six large free range eggs";
     }
 
 }

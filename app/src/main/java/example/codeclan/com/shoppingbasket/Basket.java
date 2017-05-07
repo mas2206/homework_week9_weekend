@@ -26,19 +26,16 @@ public class Basket {
         contentsOfBasket.clear();
     }
 
-    public Item removeItemFromBasket() {
-        if (getNumberOfItemsInBasket() > 0) {
-            return contentsOfBasket.remove(0);
-        }
-        return null;
+    public void removeItemFromBasket(Item item) {
+        contentsOfBasket.remove(item);
     }
 
-    public int getValueOfItemsInBasket() {
-        int total = 0;
+    public int getTotalCostOfBasket() {
+        int totalCost = 0;
         for (Item item : contentsOfBasket) {
-            total += item.itemValue();
+            totalCost += item.itemCost();
         }
-        return total;
+        return totalCost;
     }
 
 }
