@@ -38,4 +38,14 @@ public class Basket {
         return totalCost;
     }
 
+    public void applyBuyOneGetOneFreeDeal(Item freeItem) {
+        freeItem = new Item() {
+            @Override
+            public int itemCost() {
+                return 0;
+            }
+        };
+        addItemToBasket(freeItem);
+    }
+
 }

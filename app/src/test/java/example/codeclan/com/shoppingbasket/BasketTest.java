@@ -136,4 +136,25 @@ public class BasketTest {
         assertEquals(495, basket.getTotalCostOfBasket());
     }
 
+    @Test
+    public void buyOneGetOneFreeTest() {
+        basket.addItemToBasket(pasta);
+        basket.applyBuyOneGetOneFreeDeal(pasta);
+        assertEquals(2, basket.getNumberOfItemsInBasket());
+        assertEquals(40, basket.getTotalCostOfBasket());
+    }
+
+    @Test
+    public void buyOneGetOneFreeWorksWithMultipleItems() {
+        basket.addItemToBasket(milk);
+        basket.applyBuyOneGetOneFreeDeal(milk);
+        basket.addItemToBasket(milk);
+        basket.applyBuyOneGetOneFreeDeal(milk);
+        basket.addItemToBasket(bread);
+        basket.applyBuyOneGetOneFreeDeal(bread);
+        basket.addItemToBasket(pasta);
+        assertEquals(7, basket.getNumberOfItemsInBasket());
+        assertEquals(345, basket.getTotalCostOfBasket());
+    }
+
 }
